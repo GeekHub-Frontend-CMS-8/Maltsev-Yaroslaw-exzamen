@@ -1,0 +1,33 @@
+.button
+  padding: 20px 30px
+  border-radius: 5px
+  border: none
+  background-color: #16a085
+  color: #ffffff
+  font-family: "Gotham Rounded"
+  font-size: 12px
+  font-weight: 700
+  text-transform: uppercase
+  &:hover
+    transition: 0.3s
+    background: #58595b
+  &__list
+    width: 100%
+    padding: 0px
+    +flex-justify-align-flow(center,center,row nowrap)
+    &--bottom
+      padding-top: 220px
+    &-item
+      padding: 0px 15px
+  &__img--social
+    padding: 11px 10px
+  @each $social-button in twitter, dribbble, flickr
+    &--#{$social-button}
+      background: url('../img/main-page/#{$social-button}.png') no-repeat
+      background-size: 100% 100%
+  &--send
+    padding: (63px/2 - 8px) (60px/2 - 10px)
+  &__img--send
+    padding: 8px 10px
+    background: url('../img/say-hello/fa-check.png') no-repeat
+    background-size: 100% 100%
